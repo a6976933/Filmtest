@@ -16,6 +16,21 @@ def command_parse():
     parser.add_argument('--path', '-p', type=str, required=True, help='video document path')
     return parser.parse_args()
 
+def latencyTest(childPipe):
+    latency = 0
+    childPipe.send("lat start")
+    interval = 10
+    start = time.time()
+    while True:
+        if childPipe.poll():
+            if childPipe.recv() == "End":
+                adjustNetworkEnv(stop=True)
+                break
+        end = time.time()
+        if end-start >= interval:
+            latency += 100
+            adjustNetworkEnv(latency=latency)
+
 def adjustNetworkEnv(latency=-1, packetLoss=-1, targetBW=-1, defaultBW=-1, stop=False):
     comcastCmd = "sudo comcast --device=en0"
     if(latency != -1):
@@ -62,11 +77,13 @@ def streaming(input_path, output_path, mode, rate, delay, delay_jitter, loss, fp
     '''
     #if parent_conn.recv() == 'Success':
 
+
     s = "vlc "+input_path+" --no-video-title --play-and-exit --quiet :sout=#rtp{sdp=rtsp://:8554/} :sout--all :sout-keep"
     vlcProc = Process(target=openVLC, args=(s, ))
     vlcProc.start()
+    time.sleep(0.5)
 
-    s = "ffmpeg -i rtsp://127.0.0.1:8554/ -codec copy "+ output_path
+    s = "ffmpeg -i rtsp://127.0.0.1:8554/ -codec copy -r "+fps+" "+output_path
     subprocess.run(s.split())
     #time.sleep(0.5)
     #s = "/Users/allenwang/ffmpeg/ffmpeg -hide_banner -loglevel panic -i rtsp://@127.0.0.1:8554/ -codec copy "+output_path /"+input_path+" "+input_path+"
