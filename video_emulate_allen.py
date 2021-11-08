@@ -144,7 +144,7 @@ def streaming(input_path, output_path, mode, rate, delay, delay_jitter, loss, fp
 if __name__ == "__main__":
     args = command_parse()
     fileList = os.listdir(args.path)
-    logFile = open(datetime.strftime(datetime.now(), '%Y%m%d%H%M%S')+".txt")
+    logFile = open(datetime.strftime(datetime.now(), '%Y%m%d%H%M%S')+".txt", "w+")
     for filename in fileList:
         if(isfile(filename) and filename[-4:] == '.mp4'):
             filepath = filename[:-4] #join(args.path, filename[:-4])
