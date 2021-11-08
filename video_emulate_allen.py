@@ -147,7 +147,7 @@ if __name__ == "__main__":
     logFile = open(datetime.strftime(datetime.now(), '%Y%m%d%H%M%S')+".txt", "w+")
     for filename in fileList:
         if(isfile(filename) and filename[-4:] == '.mp4'):
-            filepath = filename[:-4] #join(args.path, filename[:-4])
+            filepath = join(args.path, filename)
             print(filepath)
             outputPath = join(args.path, "output", filename[:-4]+'.mp4')
             print(outputPath)
