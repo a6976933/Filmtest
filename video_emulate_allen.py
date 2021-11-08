@@ -1,25 +1,30 @@
 import os
 import argparse
 import time
-import numpy as np
+#import numpy as np
 import logging
 import subprocess
+from datetime import datetime
 from multiprocessing import Process, Lock, Pipe
 from os.path import isfile, isdir, join
 import random
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logFile = NULL
+
+def record2File(text):
+    logFile.write(text)
+    logFile.flush()
 
 def command_parse():
     parser = argparse.ArgumentParser()
     parser.add_argument('--path', '-p', type=str, required=True, help='video document path')
     return parser.parse_args()
 
-def latencyTest(childPipe):
-    latency = 0
-    childPipe.send("lat start")
-    interval = 10
+def bWDecreaseTest(childPipe, startBW=10, amount=1, interval=10):
+    bandwidth = startBW
+    adjustNetworkEnv(defaultBW=bandwidth)
+    childPipe.sned("bw start")
+    interval = interval
     start = time.time()
     while True:
         if childPipe.poll():
@@ -28,8 +33,42 @@ def latencyTest(childPipe):
                 break
         end = time.time()
         if end-start >= interval:
-            latency += 100
+            bandwidth -= amount
+            adjustNetworkEnv(targetBW=bandwidth)
+
+def latencyIncreaseTest(childPipe, amount=100, interval=10):
+    latency = 0
+    childPipe.send("lat start")
+    interval = interval
+    start = time.time()
+    while True:
+        if childPipe.poll():
+            if childPipe.recv() == "End":
+                adjustNetworkEnv(stop=True)
+                break
+        end = time.time()
+        if end-start >= interval:
+            latency += amount
             adjustNetworkEnv(latency=latency)
+
+def packetLossIncreaseTest(childPipe, amount=0.02, interval=10):
+    packetLoss = 0
+    childPipe.send("pl start")
+    interval = interval
+    start = time.time()
+    while True:
+        if childPipe.poll():
+            if childPipe.recv() == "End":
+                adjustNetworkEnv(stop=True)
+                break
+        end = time.time()
+        if end-start >= interval:
+            packetLoss += amount
+            adjustNetworkEnv(packetLoss=packetLoss)
+
+#def networkEnvTest(childPipe, mode):
+
+
 
 def adjustNetworkEnv(latency=-1, packetLoss=-1, targetBW=-1, defaultBW=-1, stop=False):
     comcastCmd = "sudo comcast --device=en0"
@@ -105,6 +144,7 @@ def streaming(input_path, output_path, mode, rate, delay, delay_jitter, loss, fp
 if __name__ == "__main__":
     args = command_parse()
     fileList = os.listdir(args.path)
+    logFile = open(datetime.strftime(datetime.now(), '%Y%m%d%H%M%S')+".txt")
     for filename in fileList:
         if(isfile(filename) and filename[-4:] == '.mp4'):
             filepath = filename[:-4] #join(args.path, filename[:-4])
@@ -112,4 +152,5 @@ if __name__ == "__main__":
             outputPath = join(args.path, "output", filename[:-4]+'.mp4')
             print(outputPath)
             streaming(filepath, outputPath, 0, 0, 0, 0, 0, '30')
+    logFile.close()
 
