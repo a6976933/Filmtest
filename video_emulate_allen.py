@@ -9,7 +9,7 @@ from multiprocessing import Process, Lock, Pipe
 from os.path import isfile, isdir, join
 import random
 
-logFile = NULL
+logFile = None
 
 def record2File(text):
     logFile.write(text)
