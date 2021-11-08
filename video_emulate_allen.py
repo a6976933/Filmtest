@@ -120,7 +120,7 @@ def streaming(input_path, output_path, mode, rate, delay, delay_jitter, loss, fp
     s = "vlc "+input_path+" --no-video-title --play-and-exit --quiet :sout=#rtp{sdp=rtsp://:8554/} :sout--all :sout-keep"
     vlcProc = Process(target=openVLC, args=(s, ))
     vlcProc.start()
-    time.sleep(0.5)
+    time.sleep(1)
 
     s = "ffmpeg -i rtsp://127.0.0.1:8554/ -codec copy -r "+fps+" "+output_path
     subprocess.run(s.split())
