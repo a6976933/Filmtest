@@ -29,8 +29,9 @@ def adjustNetworkEnv(latency=-1, packetLoss=-1, targetBW=-1, defaultBW=-1, stop=
     if(stop):
         comcastCmd = "comcast --device=en0 --stop"
     subprocess.Popen(comcastCmd.split(' '), stdin=subprocess.PIPE, stdout=subprocess.PIPE)
-    
-    
+
+def openVLC(command):
+    subprocess.run(command, shell=True)
 
 def openRTSPServer(command):
     #subprocess.run(command, shell=True)
@@ -61,11 +62,14 @@ def streaming(input_path, output_path, mode, rate, delay, delay_jitter, loss, fp
     '''
     #if parent_conn.recv() == 'Success':
 
+    s = "vlc "+input_path+" --no-video-title --play-and-exit --quiet :sout=#rtp{sdp=rtsp://:8554/} :sout--all :sout-keep"
+    vlcProc = Process(target=openVLC, args=(s, ))
+    vlcProc.start()
 
-    s = "/Users/allenwang/ffmpeg/ffmpeg -i rtsp://127.0.0.1:8554/"+input_path+" -codec copy "+ output_path
+    s = "ffmpeg -i rtsp://127.0.0.1:8554/ -codec copy "+ output_path
     subprocess.run(s.split())
     #time.sleep(0.5)
-    #s = "/Users/allenwang/ffmpeg/ffmpeg -hide_banner -loglevel panic -i rtsp://@127.0.0.1:8554/ -codec copy "+output_path /"+input_path+"
+    #s = "/Users/allenwang/ffmpeg/ffmpeg -hide_banner -loglevel panic -i rtsp://@127.0.0.1:8554/ -codec copy "+output_path /"+input_path+" "+input_path+"
     #"/Users/allenwang/ffmpeg/ffmpeg -hide_banner -loglevel panic -i rtsp://127.0.0.1:8554/ -codec copy -r "+ fps +" "+ output_path
     #subprocess.run(s.split())
     #elif parent_conn.recv() == 'Fail':
@@ -75,7 +79,7 @@ def streaming(input_path, output_path, mode, rate, delay, delay_jitter, loss, fp
     #vlc -vvv 655381338.945520.mp4 --sout '#rtp{dst=127.0.0.1,port=8554,sdp=rtsp://:8554/}'
     #/Users/allenwang/ffmpeg/ffmpeg -i rtsp://@127.0.0.1:8554/ -codec copy /Users/allenwang/filmtest/output/testtest.mp4
     #vlc -vvv rtsp://127.0.0.1:8554/live --sout="#transcode{vcodec=h264}:std{access=file,mux=mp4,dst=/Users/allenwang/filmtest/output/test1.mp4}"
-    rtspServer.join()
+    vlcProc.join()
     print('Simulatioin done.')
     #parent_conn.send('End')
     return
@@ -85,7 +89,7 @@ if __name__ == "__main__":
     args = command_parse()
     fileList = os.listdir(args.path)
     for filename in fileList:
-        if(isfile(filename) and filename[-4:] == '.MOV'):
+        if(isfile(filename) and filename[-4:] == '.mp4'):
             filepath = filename[:-4] #join(args.path, filename[:-4])
             print(filepath)
             outputPath = join(args.path, "output", filename[:-4]+'.mp4')
