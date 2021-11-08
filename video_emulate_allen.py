@@ -111,13 +111,13 @@ def streaming(input_path, output_path, mode, rate, delay, delay_jitter, loss, fp
     # os.system("ffmpeg -i rtsp://127.0.0.1:8554/ -codec copy -r "+ fps +" "+ output_path)
     '''
     parent_conn, child_conn = Pipe()
-    simulation = Process(target=networkSimulate, args=(child_conn, mode, rate, delay, delay_jitter, loss))
+    simulation = Process(target=networkSimulate, args=(child_conn, mode, rate, delay, delay_jitter, loss)) --no-video-title
     simulation.start()
     '''
     #if parent_conn.recv() == 'Success':
 
 
-    s = "vlc "+input_path+" --no-video-title --play-and-exit --quiet :sout=#rtp{sdp=rtsp://:8554/} :sout--all :sout-keep"
+    s = "vlc "+input_path+"  --play-and-exit --quiet :sout=#rtp{sdp=rtsp://:8554/} :sout--all :sout-keep"
     vlcProc = Process(target=openVLC, args=(s, ))
     vlcProc.start()
     time.sleep(1)
