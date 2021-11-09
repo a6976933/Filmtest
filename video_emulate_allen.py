@@ -171,7 +171,7 @@ def streaming(input_path, output_path, mode, rate, delay, delay_jitter, loss, fp
         #vlcProc.start()
         #time.sleep(3)
 
-        s = "ffmpeg -i rtmp://127.0.0.1/vod/test.mp4 -rtsp-transport tcp -codec copy -r "+fps+" "+output_path
+        s = "ffmpeg -i rtmp://127.0.0.1/vod/test.mp4 -codec copy -r "+fps+" "+output_path
         subprocess.run(s.split())
     #time.sleep(0.5)
     #s = "ffmpeg -i rtsp://127.0.0.1:8554/ -rtsp-transport tcp -codec copy -r "+fps+" "+output_path
