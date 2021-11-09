@@ -1,0 +1,518 @@
+/home/mvnl/Filmtest/test.mp4
+/home/mvnl/Filmtest/output/test.mp4
+Start simulation
+1636439382.2999098
+VLC media player 3.0.16 Vetinari (revision 3.0.16-0-g5e70837d8d)
+Qt: Session management error: Could not open network socket
+ffmpeg version 4.2.4-1ubuntu0.1 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 9 (Ubuntu 9.3.0-10ubuntu2)
+  configuration: --prefix=/usr --extra-version=1ubuntu0.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-avresample --disable-filter=resample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librsvg --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-nvenc --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 31.100 / 56. 31.100
+  libavcodec     58. 54.100 / 58. 54.100
+  libavformat    58. 29.100 / 58. 29.100
+  libavdevice    58.  8.100 / 58.  8.100
+  libavfilter     7. 57.100 /  7. 57.100
+  libavresample   4.  0.  0 /  4.  0.  0
+  libswscale      5.  5.100 /  5.  5.100
+  libswresample   3.  5.100 /  3.  5.100
+  libpostproc    55.  5.100 / 55.  5.100
+[rtsp @ 0x558244481700] The profile-level-id field size is invalid (640028)
+latency increase to 200 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '200ms'], returncode=0)
+Input #0, rtsp, from 'rtsp://127.0.0.1:8554/':
+  Metadata:
+    title           : Unnamed
+    comment         : N/A
+  Duration: N/A, start: 1.949025, bitrate: N/A
+    Stream #0:0: Audio: aac (LC), 44100 Hz, stereo, fltp
+    Stream #0:1: Video: h264 (High), yuv420p(tv, bt709, progressive), 960x540, 30 fps, 30 tbr, 90k tbn, 180k tbc
+Output #0, mp4, to '/home/mvnl/Filmtest/output/test.mp4':
+  Metadata:
+    title           : Unnamed
+    comment         : N/A
+    encoder         : Lavf58.29.100
+    Stream #0:0: Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 960x540, q=2-31, 30 fps, 30 tbr, 15360 tbn, 30 tbc
+    Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp
+Stream mapping:
+  Stream #0:1 -> #0:0 (copy)
+  Stream #0:0 -> #0:1 (copy)
+Press [q] to stop, [?] for help
+[mp4 @ 0x558244504500] Timestamps are unset in a packet for stream 0. This is deprecated and will stop working in the future. Fix your code to set the timestamps properly
+[mp4 @ 0x558244504500] pts has no value
+frame=   45 fps=0.0 q=-1.0 size=     256kB time=00:00:01.53 bitrate=1368.7kbits/s speed=3.frame=   61 fps= 60 q=-1.0 size=     256kB time=00:00:02.04 bitrate=1026.5kbits/s speed=  frame=   76 fps= 50 q=-1.0 size=     512kB time=00:00:02.55 bitrate=1642.3kbits/s speed=1.frame=   91 fps= 45 q=-1.0 size=     512kB time=00:00:03.06 bitrate=1368.6kbits/s speed= 1frame=  107 fps= 42 q=-1.0 size=     768kB time=00:00:03.57 bitrate=1759.5kbits/s speed= 1frame=  122 fps= 40 q=-1.0 size=     768kB time=00:00:04.08 bitrate=1539.6kbits/s speed=1.latency increase to 400 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '400ms'], returncode=0)
+frame=  137 fps= 38 q=-1.0 size=    1024kB time=00:00:04.64 bitrate=1807.0kbits/s speed= 1frame=  146 fps= 36 q=-1.0 size=    1024kB time=00:00:04.94 bitrate=1696.6kbits/s speed=1.frame=  162 fps= 35 q=-1.0 size=    1024kB time=00:00:05.45 bitrate=1537.8kbits/s speed=1.frame=  177 fps= 35 q=-1.0 size=    1280kB time=00:00:05.96 bitrate=1757.6kbits/s speed=1.frame=  192 fps= 34 q=-1.0 size=    1280kB time=00:00:06.47 bitrate=1619.0kbits/s speed=1.frame=  208 fps= 34 q=-1.0 size=    1536kB time=00:00:06.98 bitrate=1800.7kbits/s speed=1.frame=  223 fps= 34 q=-1.0 size=    1536kB time=00:00:07.49 bitrate=1678.1kbits/s speed=1.frame=  238 fps= 33 q=-1.0 size=    1536kB time=00:00:08.00 bitrate=1571.0kbits/s speed=1.latency increase to 600 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '600ms'], returncode=0)
+frame=  253 fps= 33 q=-1.0 size=    1792kB time=00:00:08.52 bitrate=1723.0kbits/s speed=1.frame=  263 fps= 32 q=-1.0 size=    1792kB time=00:00:08.84 bitrate=1659.7kbits/s speed=1.frame=  278 fps= 32 q=-1.0 size=    2048kB time=00:00:09.35 bitrate=1793.2kbits/s speed=1.frame=  294 fps= 32 q=-1.0 size=    2048kB time=00:00:09.87 bitrate=1699.8kbits/s speed=1.frame=  309 fps= 32 q=-1.0 size=    2304kB time=00:00:10.40 bitrate=1814.1kbits/s speed=1.frame=  325 fps= 32 q=-1.0 size=    2304kB time=00:00:10.89 bitrate=1732.7kbits/s speed=1.frame=  340 fps= 32 q=-1.0 size=    2560kB time=00:00:11.40 bitrate=1839.2kbits/s speed=1.frame=  356 fps= 32 q=-1.0 size=    2560kB time=00:00:11.93 bitrate=1756.9kbits/s speed=1.latency increase to 800 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '800ms'], returncode=0)
+frame=  371 fps= 31 q=-1.0 size=    2560kB time=00:00:12.44 bitrate=1684.8kbits/s speed=1.frame=  383 fps= 31 q=-1.0 size=    2816kB time=00:00:12.84 bitrate=1796.3kbits/s speed=1.frame=  398 fps= 31 q=-1.0 size=    2816kB time=00:00:13.37 bitrate=1724.6kbits/s speed=1.frame=  414 fps= 31 q=-1.0 size=    3072kB time=00:00:13.86 bitrate=1815.2kbits/s speed=1.frame=  429 fps= 31 q=-1.0 size=    3072kB time=00:00:14.37 bitrate=1750.7kbits/s speed=1.[mp4 @ 0x558244504500] Non-monotonous DTS in output stream 0:0; previous: 223157, current: 222603; changing to 223158. This may result in incorrect timestamps in the output file.
+[mp4 @ 0x558244504500] Non-monotonous DTS in output stream 0:0; previous: 224139, current: 223627; changing to 224140. This may result in incorrect timestamps in the output file.
+frame=  444 fps= 31 q=-1.0 size=    3328kB time=00:00:14.90 bitrate=1829.0kbits/s speed=1.frame=  460 fps= 31 q=-1.0 size=    3328kB time=00:00:15.39 bitrate=1771.1kbits/s speed=1.frame=  475 fps= 31 q=-1.0 size=    3584kB time=00:00:15.90 bitrate=1846.1kbits/s speed=1.latency increase to 1000 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '1000ms'], returncode=0)
+frame=  490 fps= 31 q=-1.0 size=    3584kB time=00:00:16.41 bitrate=1788.6kbits/s speed=1.frame=  503 fps= 30 q=-1.0 size=    3584kB time=00:00:16.83 bitrate=1744.2kbits/s speed=1.frame=  518 fps= 30 q=-1.0 size=    3840kB time=00:00:17.34 bitrate=1813.8kbits/s speed=1.frame=  534 fps= 30 q=-1.0 size=    3840kB time=00:00:17.85 bitrate=1761.9kbits/s speed=1.frame=  549 fps= 30 q=-1.0 size=    4096kB time=00:00:18.36 bitrate=1827.0kbits/s speed=1.frame=  564 fps= 30 q=-1.0 size=    4096kB time=00:00:18.87 bitrate=1777.6kbits/s speed=1.frame=  579 fps= 30 q=-1.0 size=    4352kB time=00:00:19.38 bitrate=1838.9kbits/s speed=1.latency increase to 1200 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '1200ms'], returncode=0)
+frame=  595 fps= 30 q=-1.0 size=    4352kB time=00:00:19.90 bitrate=1790.9kbits/s speed=1.frame=  610 fps= 30 q=-1.0 size=    4608kB time=00:00:20.41 bitrate=1848.8kbits/s speed=1.frame=  622 fps= 30 q=-1.0 size=    4608kB time=00:00:20.85 bitrate=1809.7kbits/s speed=  frame=  638 fps= 30 q=-1.0 size=    4608kB time=00:00:21.34 bitrate=1768.3kbits/s speed=  frame=  653 fps= 30 q=-1.0 size=    4864kB time=00:00:21.85 bitrate=1823.0kbits/s speed=  frame=  668 fps= 30 q=-1.0 size=    4864kB time=00:00:22.39 bitrate=1779.5kbits/s speed=  frame=  684 fps= 30 q=-1.0 size=    5120kB time=00:00:22.87 bitrate=1833.2kbits/s speed=  frame=  699 fps= 30 q=-1.0 size=    5120kB time=00:00:23.39 bitrate=1793.2kbits/s speed=  latency increase to 1400 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '1400ms'], returncode=0)
+frame=  715 fps= 30 q=-1.0 size=    5376kB time=00:00:23.90 bitrate=1842.6kbits/s speed=  frame=  730 fps= 30 q=-1.0 size=    5376kB time=00:00:24.41 bitrate=1804.0kbits/s speed=  [mp4 @ 0x558244504500] Non-monotonous DTS in output stream 0:0; previous: 376772, current: 376151; changing to 376773. This may result in incorrect timestamps in the output file.
+[mp4 @ 0x558244504500] Non-monotonous DTS in output stream 0:0; previous: 377713, current: 377201; changing to 377714. This may result in incorrect timestamps in the output file.
+frame=  743 fps= 30 q=-1.0 size=    5376kB time=00:00:24.84 bitrate=1772.4kbits/s speed=0.frame=  758 fps= 30 q=-1.0 size=    5632kB time=00:00:25.35 bitrate=1819.4kbits/s speed=0.frame=  774 fps= 30 q=-1.0 size=    5632kB time=00:00:25.87 bitrate=1783.4kbits/s speed=0.frame=  789 fps= 30 q=-1.0 size=    5888kB time=00:00:26.38 bitrate=1828.4kbits/s speed=0.frame=  804 fps= 30 q=-1.0 size=    5888kB time=00:00:26.89 bitrate=1793.7kbits/s speed=0.frame=  820 fps= 30 q=-1.0 size=    6144kB time=00:00:27.40 bitrate=1836.8kbits/s speed=0.latency increase to 1600 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '1600ms'], returncode=0)
+frame=  834 fps= 30 q=-1.0 size=    6144kB time=00:00:27.91 bitrate=1803.1kbits/s speed=0.frame=  850 fps= 30 q=-1.0 size=    6400kB time=00:00:28.42 bitrate=1844.5kbits/s speed=0.frame=  863 fps= 30 q=-1.0 size=    6400kB time=00:00:28.84 bitrate=1817.8kbits/s speed=0.frame=  878 fps= 30 q=-1.0 size=    6656kB time=00:00:29.35 bitrate=1857.6kbits/s speed=0.frame=  893 fps= 30 q=-1.0 size=    6656kB time=00:00:29.86 bitrate=1826.0kbits/s speed=0.frame=  908 fps= 30 q=-1.0 size=    6912kB time=00:00:30.37 bitrate=1864.4kbits/s speed=0.frame=  924 fps= 30 q=-1.0 size=    6912kB time=00:00:30.88 bitrate=1833.5kbits/s speed=0.latency increase to 1800 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '1800ms'], returncode=0)
+frame=  939 fps= 30 q=-1.0 size=    7168kB time=00:00:31.41 bitrate=1869.1kbits/s speed=0.frame=  954 fps= 30 q=-1.0 size=    7168kB time=00:00:31.88 bitrate=1841.9kbits/s speed=0.frame=  969 fps= 30 q=-1.0 size=    7168kB time=00:00:32.41 bitrate=1811.5kbits/s speed=0.frame=  982 fps= 29 q=-1.0 size=    7424kB time=00:00:32.85 bitrate=1851.0kbits/s speed=0.frame=  998 fps= 29 q=-1.0 size=    7424kB time=00:00:33.34 bitrate=1824.0kbits/s speed=0.frame= 1013 fps= 29 q=-1.0 size=    7680kB time=00:00:33.85 bitrate=1858.4kbits/s speed=0.frame= 1028 fps= 29 q=-1.0 size=    7680kB time=00:00:34.36 bitrate=1830.8kbits/s speed=0.[mp4 @ 0x558244504500] Non-monotonous DTS in output stream 0:0; previous: 530312, current: 529800; changing to 530313. This may result in incorrect timestamps in the output file.
+frame= 1044 fps= 29 q=-1.0 size=    7936kB time=00:00:34.88 bitrate=1863.9kbits/s speed=0.latency increase to 2000 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '2000ms'], returncode=0)
+frame= 1059 fps= 29 q=-1.0 size=    7936kB time=00:00:35.39 bitrate=1837.0kbits/s speed=0.frame= 1074 fps= 29 q=-1.0 size=    7936kB time=00:00:35.90 bitrate=1810.8kbits/s speed=0.frame= 1089 fps= 29 q=-1.0 size=    8192kB time=00:00:36.41 bitrate=1843.0kbits/s speed=0.frame= 1103 fps= 29 q=-1.0 size=    8192kB time=00:00:36.85 bitrate=1820.9kbits/s speed=0.frame= 1119 fps= 29 q=-1.0 size=    8448kB time=00:00:37.38 bitrate=1851.0kbits/s speed=0.frame= 1134 fps= 29 q=-1.0 size=    8448kB time=00:00:37.89 bitrate=1826.1kbits/s speed=0.frame= 1150 fps= 29 q=-1.0 size=    8704kB time=00:00:38.40 bitrate=1856.4kbits/s speed=0.latency increase to 2200 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '2200ms'], returncode=0)
+frame= 1165 fps= 29 q=-1.0 size=    8704kB time=00:00:38.92 bitrate=1832.0kbits/s speed=0.frame= 1180 fps= 29 q=-1.0 size=    8960kB time=00:00:39.43 bitrate=1861.5kbits/s speed=0.frame= 1196 fps= 29 q=-1.0 size=    8960kB time=00:00:39.94 bitrate=1837.8kbits/s speed=0.frame= 1211 fps= 29 q=-1.0 size=    9216kB time=00:00:40.45 bitrate=1866.4kbits/s speed=0.frame= 1222 fps= 29 q=-1.0 size=    9216kB time=00:00:40.86 bitrate=1847.3kbits/s speed=0.frame= 1238 fps= 29 q=-1.0 size=    9216kB time=00:00:41.35 bitrate=1825.5kbits/s speed=0.frame= 1253 fps= 29 q=-1.0 size=    9472kB time=00:00:41.86 bitrate=1853.4kbits/s speed=0.frame= 1268 fps= 29 q=-1.0 size=    9472kB time=00:00:42.37 bitrate=1831.0kbits/s speed=0.latency increase to 2400 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '2400ms'], returncode=0)
+frame= 1283 fps= 29 q=-1.0 size=    9728kB time=00:00:42.86 bitrate=1859.1kbits/s speed=0.frame= 1298 fps= 29 q=-1.0 size=    9728kB time=00:00:43.39 bitrate=1836.2kbits/s speed=0.frame= 1314 fps= 29 q=-1.0 size=    9984kB time=00:00:43.88 bitrate=1863.6kbits/s speed=0.frame= 1329 fps= 29 q=-1.0 size=    9984kB time=00:00:44.39 bitrate=1842.2kbits/s speed=0.frame= 1342 fps= 29 q=-1.0 size=   10240kB time=00:00:44.86 bitrate=1869.9kbits/s speed=0.frame= 1358 fps= 29 q=-1.0 size=   10240kB time=00:00:45.34 bitrate=1849.8kbits/s speed=0.frame= 1373 fps= 29 q=-1.0 size=   10240kB time=00:00:45.85 bitrate=1829.2kbits/s speed=0.frame= 1388 fps= 29 q=-1.0 size=   10496kB time=00:00:46.36 bitrate=1854.3kbits/s speed=0.latency increase to 2600 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '2600ms'], returncode=0)
+frame= 1404 fps= 29 q=-1.0 size=   10496kB time=00:00:46.88 bitrate=1834.1kbits/s speed=0.frame= 1419 fps= 29 q=-1.0 size=   10752kB time=00:00:47.39 bitrate=1858.6kbits/s speed=0.frame= 1434 fps= 29 q=-1.0 size=   10752kB time=00:00:47.90 bitrate=1838.8kbits/s speed=0.frame= 1449 fps= 29 q=-1.0 size=   11008kB time=00:00:48.43 bitrate=1861.8kbits/s speed=0.frame= 1462 fps= 29 q=-1.0 size=   11008kB time=00:00:48.85 bitrate=1845.9kbits/s speed=0.frame= 1477 fps= 29 q=-1.0 size=   11264kB time=00:00:49.36 bitrate=1869.2kbits/s speed=0.frame= 1493 fps= 29 q=-1.0 size=   11264kB time=00:00:49.86 bitrate=1850.6kbits/s speed=0.latency increase to 2800 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '2800ms'], returncode=0)
+frame= 1508 fps= 29 q=-1.0 size=   11520kB time=00:00:50.37 bitrate=1873.5kbits/s speed=0.frame= 1523 fps= 29 q=-1.0 size=   11520kB time=00:00:50.88 bitrate=1854.7kbits/s speed=0.frame= 1539 fps= 29 q=-1.0 size=   11776kB time=00:00:51.39 bitrate=1877.1kbits/s speed=0.frame= 1554 fps= 29 q=-1.0 size=   11776kB time=00:00:51.90 bitrate=1858.6kbits/s speed=0.frame= 1569 fps= 29 q=-1.0 size=   11776kB time=00:00:52.41 bitrate=1840.5kbits/s speed=0.frame= 1582 fps= 29 q=-1.0 size=   12032kB time=00:00:52.85 bitrate=1864.8kbits/s speed=0.frame= 1597 fps= 29 q=-1.0 size=   12032kB time=00:00:53.34 bitrate=1847.8kbits/s speed=0.frame= 1612 fps= 29 q=-1.0 size=   12288kB time=00:00:53.85 bitrate=1869.2kbits/s speed=0.latency increase to 3000 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '3000ms'], returncode=0)
+frame= 1628 fps= 29 q=-1.0 size=   12288kB time=00:00:54.36 bitrate=1851.6kbits/s speed=0.frame= 1643 fps= 29 q=-1.0 size=   12288kB time=00:00:54.87 bitrate=1834.5kbits/s speed=0.frame= 1658 fps= 29 q=-1.0 size=   12544kB time=00:00:55.38 bitrate=1855.4kbits/s speed=0.frame= 1673 fps= 29 q=-1.0 size=   12544kB time=00:00:55.89 bitrate=1838.5kbits/s speed=0.frame= 1688 fps= 29 q=-1.0 size=   12800kB time=00:00:56.38 bitrate=1859.8kbits/s speed=0.frame= 1702 fps= 29 q=-1.0 size=   12800kB time=00:00:56.84 bitrate=1844.6kbits/s speed=0.frame= 1717 fps= 29 q=-1.0 size=   13056kB time=00:00:57.35 bitrate=1864.7kbits/s speed=0.latency increase to 3200 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '3200ms'], returncode=0)
+frame= 1732 fps= 29 q=-1.0 size=   13056kB time=00:00:57.84 bitrate=1849.0kbits/s speed=0.frame= 1747 fps= 29 q=-1.0 size=   13312kB time=00:00:58.37 bitrate=1868.0kbits/s speed=0.frame= 1763 fps= 29 q=-1.0 size=   13312kB time=00:00:58.86 bitrate=1852.5kbits/s speed=0.frame= 1778 fps= 29 q=-1.0 size=   13568kB time=00:00:59.37 bitrate=1871.9kbits/s speed=0.[mp4 @ 0x558244504500] Non-monotonous DTS in output stream 0:0; previous: 914380, current: 913806; changing to 914381. This may result in incorrect timestamps in the output file.
+[mp4 @ 0x558244504500] Non-monotonous DTS in output stream 0:0; previous: 915342, current: 914830; changing to 915343. This may result in incorrect timestamps in the output file.
+frame= 1793 fps= 29 q=-1.0 size=   13568kB time=00:00:59.86 bitrate=1856.8kbits/s speed=0.frame= 1808 fps= 29 q=-1.0 size=   13824kB time=00:01:00.37 bitrate=1875.8kbits/s speed=0.frame= 1822 fps= 29 q=-1.0 size=   13824kB time=00:01:00.83 bitrate=1861.5kbits/s speed=0.frame= 1837 fps= 29 q=-1.0 size=   13824kB time=00:01:01.37 bitrate=1845.3kbits/s speed=0.latency increase to 3400 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '3400ms'], returncode=0)
+frame= 1853 fps= 29 q=-1.0 size=   14080kB time=00:01:01.85 bitrate=1864.7kbits/s speed=0.frame= 1868 fps= 29 q=-1.0 size=   14080kB time=00:01:02.36 bitrate=1849.4kbits/s speed=0.frame= 1883 fps= 29 q=-1.0 size=   14336kB time=00:01:02.87 bitrate=1867.7kbits/s speed=0.frame= 1899 fps= 29 q=-1.0 size=   14336kB time=00:01:03.39 bitrate=1852.7kbits/s speed=0.frame= 1914 fps= 29 q=-1.0 size=   14336kB time=00:01:03.90 bitrate=1837.8kbits/s speed=0.frame= 1929 fps= 29 q=-1.0 size=   14592kB time=00:01:04.41 bitrate=1855.8kbits/s speed=0.frame= 1942 fps= 29 q=-1.0 size=   14592kB time=00:01:04.83 bitrate=1843.7kbits/s speed=0.frame= 1957 fps= 29 q=-1.0 size=   14848kB time=00:01:05.34 bitrate=1861.4kbits/s speed=0.latency increase to 3600 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '3600ms'], returncode=0)
+frame= 1972 fps= 29 q=-1.0 size=   14848kB time=00:01:05.85 bitrate=1846.9kbits/s speed=0.frame= 1987 fps= 29 q=-1.0 size=   15104kB time=00:01:06.34 bitrate=1865.0kbits/s speed=0.frame= 2002 fps= 29 q=-1.0 size=   15104kB time=00:01:06.87 bitrate=1850.1kbits/s speed=0.frame= 2017 fps= 29 q=-1.0 size=   15360kB time=00:01:07.36 bitrate=1867.8kbits/s speed=0.frame= 2033 fps= 29 q=-1.0 size=   15360kB time=00:01:07.87 bitrate=1853.8kbits/s speed=0.frame= 2048 fps= 29 q=-1.0 size=   15616kB time=00:01:08.38 bitrate=1870.6kbits/s speed=0.frame= 2062 fps= 29 q=-1.0 size=   15616kB time=00:01:08.85 bitrate=1858.0kbits/s speed=0.latency increase to 3800 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '3800ms'], returncode=0)
+frame= 2077 fps= 29 q=-1.0 size=   15872kB time=00:01:09.38 bitrate=1873.9kbits/s speed=0.[mp4 @ 0x558244504500] Non-monotonous DTS in output stream 0:0; previous: 1067959, current: 1067398; changing to 1067960. This may result in incorrect timestamps in the output file.
+[mp4 @ 0x558244504500] Non-monotonous DTS in output stream 0:0; previous: 1068934, current: 1068422; changing to 1068935. This may result in incorrect timestamps in the output file.
+frame= 2093 fps= 29 q=-1.0 size=   15872kB time=00:01:09.87 bitrate=1860.8kbits/s speed=0.frame= 2108 fps= 29 q=-1.0 size=   15872kB time=00:01:10.38 bitrate=1847.3kbits/s speed=0.frame= 2123 fps= 29 q=-1.0 size=   16128kB time=00:01:10.89 bitrate=1863.6kbits/s speed=0.frame= 2138 fps= 29 q=-1.0 size=   16128kB time=00:01:11.38 bitrate=1850.9kbits/s speed=0.frame= 2153 fps= 29 q=-1.0 size=   16384kB time=00:01:11.89 bitrate=1866.9kbits/s speed=0.frame= 2168 fps= 29 q=-1.0 size=   16384kB time=00:01:12.40 bitrate=1853.7kbits/s speed=0.frame= 2182 fps= 29 q=-1.0 size=   16640kB time=00:01:12.84 bitrate=1871.3kbits/s speed=0.latency increase to 4000 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '4000ms'], returncode=0)
+frame= 2197 fps= 29 q=-1.0 size=   16640kB time=00:01:13.35 bitrate=1858.3kbits/s speed=0.frame= 2212 fps= 29 q=-1.0 size=   16640kB time=00:01:13.89 bitrate=1844.8kbits/s speed=0.frame= 2228 fps= 29 q=-1.0 size=   16896kB time=00:01:14.37 bitrate=1860.9kbits/s speed=0.frame= 2243 fps= 29 q=-1.0 size=   16896kB time=00:01:14.88 bitrate=1848.4kbits/s speed=0.frame= 2258 fps= 29 q=-1.0 size=   17152kB time=00:01:15.39 bitrate=1863.7kbits/s speed=0.frame= 2273 fps= 29 q=-1.0 size=   17152kB time=00:01:15.90 bitrate=1851.1kbits/s speed=0.frame= 2288 fps= 29 q=-1.0 size=   17408kB time=00:01:16.39 bitrate=1866.8kbits/s speed=0.latency increase to 4200 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '4200ms'], returncode=0)
+frame= 2301 fps= 29 q=-1.0 size=   17408kB time=00:01:16.85 bitrate=1855.5kbits/s speed=0.frame= 2317 fps= 29 q=-1.0 size=   17664kB time=00:01:17.34 bitrate=1870.9kbits/s speed=0.frame= 2332 fps= 29 q=-1.0 size=   17664kB time=00:01:17.85 bitrate=1858.6kbits/s speed=0.frame= 2348 fps= 29 q=-1.0 size=   17920kB time=00:01:18.36 bitrate=1873.2kbits/s speed=0.frame= 2363 fps= 29 q=-1.0 size=   17920kB time=00:01:18.87 bitrate=1861.1kbits/s speed=0.frame= 2378 fps= 29 q=-1.0 size=   18176kB time=00:01:19.38 bitrate=1875.6kbits/s speed=0.[mp4 @ 0x558244504500] Non-monotonous DTS in output stream 0:0; previous: 1221679, current: 1220980; changing to 1221680. This may result in incorrect timestamps in the output file.
+[mp4 @ 0x558244504500] Non-monotonous DTS in output stream 0:0; previous: 1222516, current: 1222004; changing to 1222517. This may result in incorrect timestamps in the output file.
+frame= 2394 fps= 29 q=-1.0 size=   18176kB time=00:01:19.89 bitrate=1863.6kbits/s speed=0.frame= 2409 fps= 29 q=-1.0 size=   18176kB time=00:01:20.40 bitrate=1851.8kbits/s speed=0.latency increase to 4400 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '4400ms'], returncode=0)
+frame= 2422 fps= 29 q=-1.0 size=   18432kB time=00:01:20.85 bitrate=1867.6kbits/s speed=0.frame= 2437 fps= 29 q=-1.0 size=   18432kB time=00:01:21.36 bitrate=1855.9kbits/s speed=0.frame= 2453 fps= 29 q=-1.0 size=   18688kB time=00:01:21.87 bitrate=1869.9kbits/s speed=0.frame= 2468 fps= 29 q=-1.0 size=   18688kB time=00:01:22.38 bitrate=1858.3kbits/s speed=0.frame= 2483 fps= 29 q=-1.0 size=   18944kB time=00:01:22.89 bitrate=1872.1kbits/s speed=0.frame= 2499 fps= 29 q=-1.0 size=   18944kB time=00:01:23.40 bitrate=1860.7kbits/s speed=0.frame= 2514 fps= 29 q=-1.0 size=   19200kB time=00:01:23.91 bitrate=1874.3kbits/s speed=0.frame= 2529 fps= 29 q=-1.0 size=   19200kB time=00:01:24.42 bitrate=1863.0kbits/s speed=0.latency increase to 4600 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '4600ms'], returncode=0)
+frame= 2542 fps= 29 q=-1.0 size=   19200kB time=00:01:24.84 bitrate=1853.8kbits/s speed=0.frame= 2557 fps= 29 q=-1.0 size=   19456kB time=00:01:25.35 bitrate=1867.3kbits/s speed=0.frame= 2572 fps= 29 q=-1.0 size=   19456kB time=00:01:25.88 bitrate=1855.7kbits/s speed=0.frame= 2587 fps= 29 q=-1.0 size=   19712kB time=00:01:26.37 bitrate=1869.5kbits/s speed=0.frame= 2603 fps= 29 q=-1.0 size=   19712kB time=00:01:26.88 bitrate=1858.5kbits/s speed=0.frame= 2618 fps= 29 q=-1.0 size=   19968kB time=00:01:27.39 bitrate=1871.6kbits/s speed=0.frame= 2633 fps= 29 q=-1.0 size=   19968kB time=00:01:27.90 bitrate=1860.8kbits/s speed=0.latency increase to 4800 ms
+frame= 2648 fps= 29 q=-1.0 size=   20224kB time=00:01:28.42 bitrate=1873.7kbits/s speed=0.ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '4800ms'], returncode=0)
+frame= 2661 fps= 29 q=-1.0 size=   20224kB time=00:01:28.83 bitrate=1864.9kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 8 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 4 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 2672 fps= 29 q=-1.0 size=   20224kB time=00:01:29.25 bitrate=1856.2kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 3 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[mp4 @ 0x558244504500] Non-monotonous DTS in output stream 0:0; previous: 1375149, current: 1374668; changing to 1375150. This may result in incorrect timestamps in the output file.
+frame= 2690 fps= 29 q=-1.0 size=   20480kB time=00:01:29.86 bitrate=1867.0kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 4 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 2703 fps= 29 q=-1.0 size=   20480kB time=00:01:30.34 bitrate=1857.0kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 2721 fps= 29 q=-1.0 size=   20736kB time=00:01:30.88 bitrate=1869.1kbits/s speed=0.frame= 2736 fps= 29 q=-1.0 size=   20736kB time=00:01:31.39 bitrate=1858.7kbits/s speed=0.frame= 2751 fps= 29 q=-1.0 size=   20992kB time=00:01:31.90 bitrate=1871.2kbits/s speed=0.latency increase to 5000 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '5000ms'], returncode=0)
+frame= 2766 fps= 29 q=-1.0 size=   20992kB time=00:01:32.41 bitrate=1860.8kbits/s speed=0.frame= 2779 fps= 29 q=-1.0 size=   21248kB time=00:01:32.83 bitrate=1875.0kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 5 packets
+frame= 2793 fps= 29 q=-1.0 size=   21248kB time=00:01:33.45 bitrate=1862.5kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 22 packets
+frame= 2812 fps= 29 q=-1.0 size=   21504kB time=00:01:34.06 bitrate=1872.8kbits/s speed=0.frame= 2827 fps= 29 q=-1.0 size=   21504kB time=00:01:34.57 bitrate=1862.6kbits/s speed=0.frame= 2843 fps= 29 q=-1.0 size=   21504kB time=00:01:35.08 bitrate=1852.6kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 4 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+frame= 2854 fps= 29 q=-1.0 size=   21760kB time=00:01:35.62 bitrate=1864.2kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+latency increase to 5200 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '5200ms'], returncode=0)
+frame= 2868 fps= 29 q=-1.0 size=   21760kB time=00:01:36.10 bitrate=1854.7kbits/s speed=0.frame= 2883 fps= 29 q=-1.0 size=   22016kB time=00:01:36.62 bitrate=1866.6kbits/s speed=0.frame= 2893 fps= 29 q=-1.0 size=   22016kB time=00:01:36.92 bitrate=1860.8kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 2904 fps= 29 q=-1.0 size=   22016kB time=00:01:37.41 bitrate=1851.5kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 8 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 29 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 2917 fps= 29 q=-1.0 size=   22272kB time=00:01:37.86 bitrate=1864.4kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 15 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 3 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 4 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+frame= 2929 fps= 29 q=-1.0 size=   22272kB time=00:01:38.38 bitrate=1854.5kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 2940 fps= 29 q=-1.0 size=   22528kB time=00:01:39.03 bitrate=1863.5kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+frame= 2959 fps= 29 q=-1.0 size=   22528kB time=00:01:39.52 bitrate=1854.4kbits/s speed=0.latency increase to 5400 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '5400ms'], returncode=0)
+frame= 2974 fps= 29 q=-1.0 size=   22784kB time=00:01:40.03 bitrate=1865.8kbits/s speed=0.frame= 2989 fps= 29 q=-1.0 size=   22784kB time=00:01:40.54 bitrate=1856.4kbits/s speed=0.frame= 2998 fps= 29 q=-1.0 size=   22784kB time=00:01:40.86 bitrate=1850.4kbits/s speed=0.frame= 3014 fps= 29 q=-1.0 size=   23040kB time=00:01:41.36 bitrate=1862.1kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 12 packets
+frame= 3027 fps= 29 q=-1.0 size=   23040kB time=00:01:41.82 bitrate=1853.6kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 3 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 7 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 4 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 4 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+frame= 3043 fps= 29 q=-1.0 size=   23296kB time=00:01:42.47 bitrate=1862.4kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 20 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 8 packets
+frame= 3055 fps= 29 q=-1.0 size=   23296kB time=00:01:42.96 bitrate=1853.5kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 4 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 18 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 3 packets
+frame= 3064 fps= 29 q=-1.0 size=   23296kB time=00:01:43.49 bitrate=1844.0kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+latency increase to 5600 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '5600ms'], returncode=0)
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 3081 fps= 29 q=-1.0 size=   23552kB time=00:01:43.98 bitrate=1855.5kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 4 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 4 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 3097 fps= 29 q=-1.0 size=   23552kB time=00:01:44.49 bitrate=1846.4kbits/s speed=0.[mp4 @ 0x558244504500] Non-monotonous DTS in output stream 0:0; previous: 1605555, current: 1604991; changing to 1605556. This may result in incorrect timestamps in the output file.
+[mp4 @ 0x558244504500] Non-monotonous DTS in output stream 0:0; previous: 1606527, current: 1606015; changing to 1606528. This may result in incorrect timestamps in the output file.
+frame= 3107 fps= 29 q=-1.0 size=   23552kB time=00:01:44.83 bitrate=1840.4kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 3122 fps= 29 q=-1.0 size=   23808kB time=00:01:45.27 bitrate=1852.6kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 3 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 28 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 3137 fps= 28 q=-1.0 size=   23808kB time=00:01:45.82 bitrate=1843.0kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 10 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 5 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 8 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 4 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+frame= 3154 fps= 28 q=-1.0 size=   24064kB time=00:01:46.67 bitrate=1848.0kbits/s speed=0.frame= 3169 fps= 28 q=-1.0 size=   24064kB time=00:01:47.18 bitrate=1839.2kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 7 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+latency increase to 5800 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '5800ms'], returncode=0)
+frame= 3185 fps= 28 q=-1.0 size=   24320kB time=00:01:47.69 bitrate=1850.0kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 8 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 3196 fps= 28 q=-1.0 size=   24320kB time=00:01:48.15 bitrate=1842.0kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 5 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 7 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 4 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 3 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 3214 fps= 28 q=-1.0 size=   24320kB time=00:01:48.76 bitrate=1831.8kbits/s speed=0.frame= 3223 fps= 28 q=-1.0 size=   24576kB time=00:01:49.08 bitrate=1845.6kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 11 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 4 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 7 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 3237 fps= 28 q=-1.0 size=   24576kB time=00:01:49.59 bitrate=1837.0kbits/s speed=0.frame= 3252 fps= 28 q=-1.0 size=   24576kB time=00:01:50.10 bitrate=1828.5kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 4 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 47 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 3261 fps= 28 q=-1.0 size=   24832kB time=00:01:50.64 bitrate=1838.6kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+QObject::~QObject: Timers cannot be stopped from another thread
+frame= 3279 fps= 28 q=-1.0 size=   24832kB time=00:01:51.12 bitrate=1830.5kbits/s speed=0.latency increase to 6000 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '6000ms'], returncode=0)
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 5 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 3 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 32 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed -65525 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 3286 fps= 28 q=-1.0 size=   24832kB time=00:01:51.59 bitrate=1822.9kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 3 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 6 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 9 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 3302 fps= 28 q=-1.0 size=   25088kB time=00:01:52.19 bitrate=1831.8kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 3319 fps= 28 q=-1.0 size=   25088kB time=00:01:52.80 bitrate=1822.0kbits/s speed=0.frame= 3328 fps= 28 q=-1.0 size=   25088kB time=00:01:53.10 bitrate=1817.1kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 7 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 7 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 10 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 4 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 3341 fps= 28 q=-1.0 size=   25344kB time=00:01:53.61 bitrate=1827.4kbits/s speed=0.frame= 3353 fps= 28 q=-1.0 size=   25344kB time=00:01:54.14 bitrate=1818.9kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 6 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 5 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 7 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 35 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 9 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 3362 fps= 28 q=-1.0 size=   25344kB time=00:01:54.52 bitrate=1812.9kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+latency increase to 6200 ms
+ret val:  CompletedProcess(args=['sudo', 'tc', 'qdisc', 'change', 'dev', 'lo', 'parent', '1:1', 'handle', '2:0', 'netem', 'delay', '6200ms'], returncode=0)
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+frame= 3377 fps= 28 q=-1.0 size=   25600kB time=00:01:55.14 bitrate=1821.3kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 6 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 9 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 4 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 3390 fps= 28 q=-1.0 size=   25600kB time=00:01:55.65 bitrate=1813.2kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 15 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 4 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 3402 fps= 28 q=-1.0 size=   25856kB time=00:01:56.14 bitrate=1823.7kbits/s speed=0.[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 5 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 8 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 3 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 3 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 2 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+[rtsp @ 0x558244481700] max delay reached. need to consume packet
+[rtsp @ 0x558244481700] RTP: missed 1 packets
+frame= 3411 fps= 28 q=-1.0 Lsize=   26045kB time=00:01:58.35 bitrate=1802.7kbits/s speed=0.978x    
+video:24610kB audio:1310kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.480597%
+Simulatioin done.
+
