@@ -41,6 +41,8 @@ def bWDecreaseTest(childPipe, startBW=10000, amount=0.8, interval=4):
         if end-start >= interval:
             bandwidth *= amount
             start = end
+            if bandwidth < 300:
+                bandwidth = 300
             record2File("bandwidth increase to "+str(bandwidth)+" kbit", logFile)
             print("Now bandwidth: "+str(bandwidth)+"kbit")
             adjustNetworkEnvBw(bw=bandwidth)
