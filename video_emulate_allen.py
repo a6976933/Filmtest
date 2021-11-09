@@ -24,7 +24,7 @@ def command_parse():
     parser.add_argument('--path', '-p', type=str, required=True, help='video document path')
     return parser.parse_args()
 
-def bWDecreaseTest(childPipe, startBW=10000, amount=0.8, interval=2):
+def bWDecreaseTest(childPipe, startBW=10000, amount=0.8, interval=4):
     bandwidth = startBW
     #adjustNetworkEnvBw(bw=bandwidth)
     logFile = open(datetime.strftime(datetime.now(), '%Y%m%d%H%M%S')+".txt", "w+")
@@ -41,7 +41,8 @@ def bWDecreaseTest(childPipe, startBW=10000, amount=0.8, interval=2):
         if end-start >= interval:
             bandwidth *= amount
             start = end
-            record2File("bandwidth increase to "+str(bandwidth)+" kbps", logFile)
+            record2File("bandwidth increase to "+str(bandwidth)+" kbit", logFile)
+            print("Now bandwidth: "+str(bandwidth)+"kbit")
             adjustNetworkEnvBw(bw=bandwidth)
 
 def latencyIncreaseTest(childPipe, amount=200, interval=4):
@@ -162,7 +163,7 @@ def streaming(input_path, output_path, mode, rate, delay, delay_jitter, loss, fp
     # os.system("ffmpeg -i rtsp://127.0.0.1:8554/ -codec copy -r "+ fps +" "+ output_path)
 
     parent_conn, child_conn = Pipe()
-    simulation = Process(target=latencyIncreaseTest, args=(child_conn, ))
+    simulation = Process(target=bWDecreaseTest, args=(child_conn, ))
     simulation.start()
     
     if parent_conn.recv().split(' ')[1] == 'start':
