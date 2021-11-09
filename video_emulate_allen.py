@@ -167,13 +167,14 @@ def streaming(input_path, output_path, mode, rate, delay, delay_jitter, loss, fp
     
     if parent_conn.recv().split(' ')[1] == 'start':
         s = "vlc "+input_path+"  --play-and-exit --quiet :sout=#rtp{sdp=rtsp://:8554/} :sout--all :sout-keep"
-        vlcProc = Process(target=openVLC, args=(s, ))
-        vlcProc.start()
-        time.sleep(3)
+        #vlcProc = Process(target=openVLC, args=(s, ))
+        #vlcProc.start()
+        #time.sleep(3)
 
-        s = "ffmpeg -i rtsp://127.0.0.1:8554/ -rtsp-transport tcp -codec copy -r "+fps+" "+output_path
+        s = "ffmpeg -i rtmp://127.0.0.1/vod/test.mp4 -rtsp-transport tcp -codec copy -r "+fps+" "+output_path
         subprocess.run(s.split())
     #time.sleep(0.5)
+    #s = "ffmpeg -i rtsp://127.0.0.1:8554/ -rtsp-transport tcp -codec copy -r "+fps+" "+output_path
     #s = "/Users/allenwang/ffmpeg/ffmpeg -hide_banner -loglevel panic -i rtsp://@127.0.0.1:8554/ -codec copy "+output_path /"+input_path+" "+input_path+"
     #"/Users/allenwang/ffmpeg/ffmpeg -hide_banner -loglevel panic -i rtsp://127.0.0.1:8554/ -codec copy -r "+ fps +" "+ output_path
     #subprocess.run(s.split())
