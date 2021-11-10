@@ -31,7 +31,7 @@ def opendump(ppp1):
         line = proc2.stdout.readline().decode().split()
         if(len(line) >= 9):
             newline = line[8].split('->')
-            if(len(newline > 2)):
+            if(len(newline) >= 2):
                 if(int(newline[0][10:]) != 8554):
                     sendportnum.append(int(newline[0][10:]))
     s = "sudo lsof -i -P -n"
