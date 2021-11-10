@@ -65,7 +65,7 @@ def opendump(ppp1):
                 p2.send("End")
 
 
-#pp1, cpp1 = Pipe()
+pp1, cpp1 = Pipe()
 #vlcp = Process(target=openVLC)
 #vlcp.start()
 #time.sleep(3)
