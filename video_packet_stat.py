@@ -69,7 +69,7 @@ pp1, cpp1 = Pipe()
 vlcp = Process(target=openVLC)
 vlcp.start()
 time.sleep(2)
-s = "ffmpeg -i rtsp://127.0.0.1:8554/ -codec copy -r 30 /home/mvnl/Filmtest/output/abc.mp4"
+s = "ffmpeg -i rtsp://127.0.0.1:8554/ -codec copy /home/mvnl/Filmtest/output/abc.mp4"
 subprocess.run(s.split())
 opendump(cpp1)
 
