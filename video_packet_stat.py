@@ -60,6 +60,8 @@ def opendump(ppp1):
     rcvcmd += "-w receiver.pcap"
     tp1 = Process(target=opentcpdump, args=(cp1, sdrcmd, ))
     tp2 = Process(target=opentcpdump, args=(cp2, rcvcmd, ))
+    print(sdrcmd)
+    print(rcvcmd)
     tp1.start()
     tp2.start()
     while True:
