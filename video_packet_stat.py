@@ -70,6 +70,7 @@ vlcp = Process(target=openVLC)
 vlcp.start()
 time.sleep(2)
 s = "ffmpeg -i rtsp://127.0.0.1:8554/ -codec copy -r 30 /home/mvnl/Filmtest/output/abc.mp4"
-opendump(cpp1)
 subprocess.run(s.split())
+opendump(cpp1)
+
 pp1.send("End")
