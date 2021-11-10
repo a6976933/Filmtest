@@ -19,11 +19,8 @@ s = "sudo lsof -i -P -n"
 proc1 = subprocess.Popen(s.split(), stdout=subprocess.PIPE)
 proc2 = subprocess.Popen(["grep", "vlc"], stdin=proc1.stdout, stdout=subprocess.PIPE)
 proc1.stdout.close()
-while True:
-    line = proc2.stdout.readline().decode().split()
-    print(line)
-    print(line[9])
-    time.sleep(1)
+out, err = proc2.communicate()
+print(out)
     
 
 #s = "ffmpeg -i rtsp://127.0.0.1:8554-codec copy -r 30 /home/mvnl/output/abc.mp4"
