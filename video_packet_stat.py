@@ -34,6 +34,8 @@ def opendump(ppp1):
             if(len(newline) >= 2):
                 if(int(newline[0][10:]) != 8554):
                     sendportnum.append(int(newline[0][10:]))
+                    if(sendportnum > 1):
+                        break
     s = "sudo lsof -i -P -n"
     proc1 = subprocess.Popen(s.split(), stdout=subprocess.PIPE)
     proc2 = subprocess.Popen(["grep", "ffmpeg"], stdin=proc1.stdout, stdout=subprocess.PIPE)
@@ -43,6 +45,8 @@ def opendump(ppp1):
         if(len(line) >= 9):
             if(line[7] == "UDP"):
                 recvportnum.append(int(line[8].split(":")[1]))
+                if(recvportnum > 3):
+                    break
     p1, cp1 = Pipe()
     p2, cp2 = Pipe()
     s = "sudo tcpdump -i lo "
