@@ -20,7 +20,7 @@ proc1 = subprocess.Popen(s.split(), stdout=subprocess.PIPE)
 proc2 = subprocess.Popen(["grep", "vlc"], stdin=proc1.stdout, stdout=subprocess.PIPE)
 proc1.stdout.close()
 out, err = proc2.communicate()
-print(out)
+print(out.split())
     
 
 #s = "ffmpeg -i rtsp://127.0.0.1:8554-codec copy -r 30 /home/mvnl/output/abc.mp4"
