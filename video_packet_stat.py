@@ -11,7 +11,7 @@ import random
 
 def openVLC():
     s = "vlc test.mp4  --play-and-exit --quiet :sout=#rtp{sdp=rtsp://:8554/} :sout--all :sout-keep"
-    subprocess.run(s.split())
+    subprocess.run(s.split(), shell=True)
 
 def opentcpdump(pipe, cmd):
     proc = subprocess.Popen(cmd.split(), stdout=subprocess.PIPE)
