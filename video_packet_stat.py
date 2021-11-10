@@ -16,7 +16,7 @@ def openVLC():
 def openpcap():
     pass
 s = "sudo lsof -i -P -n | grep vlc"
-proc = subprocess.Popen(s, stdout=subprocess.PIPE)
+proc = subprocess.Popen(s.split(), stdout=subprocess.PIPE)
 while True:
     line = proc.stdout.readline().decode().split()
     print(line)
