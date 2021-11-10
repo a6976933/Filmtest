@@ -10,7 +10,7 @@ from os.path import isfile, isdir, join
 import random
 
 def openVLC():
-    s = "vlc test.mp4  --play-and-exit --quiet :sout=#rtp{sdp=rtsp://:8554/} :sout--all :sout-keep"
+    s = "vlc test.mp4  --play-and-exit :sout=#rtp{sdp=rtsp://:8554/} :sout--all :sout-keep"
     subprocess.run(s.split(), shell=True)
 
 def opentcpdump(pipe, cmd):
