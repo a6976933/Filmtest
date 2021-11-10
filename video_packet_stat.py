@@ -53,10 +53,12 @@ def opendump(ppp1):
     sdrcmd = s
     rcvcmd = s
     for k in sendportnum:
-        sdrcmd += "port "+str(k)+" "
+        sdrcmd += "port "+str(k)+" or "
+    sdrcmd = sdrcmd[:-3]
     sdrcmd += "-w sender.pcap"
     for k in recvportnum:
-        rcvcmd += "port "+str(k)+" "
+        rcvcmd += "port "+str(k)+" or "
+    rcvcmd = rcvcmd[:-3]
     rcvcmd += "-w receiver.pcap"
     tp1 = Process(target=opentcpdump, args=(cp1, sdrcmd, ))
     tp2 = Process(target=opentcpdump, args=(cp2, rcvcmd, ))
