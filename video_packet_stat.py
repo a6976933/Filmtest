@@ -22,7 +22,8 @@ proc1.stdout.close()
 while True:
     line = proc2.stdout.readline().decode().split()
     print(line)
-    print(line[9])
+    if(len(line) > 10):
+        print(line[9])
     time.sleep(1)
     
 
