@@ -51,25 +51,26 @@ def opendump(ppp1):
     p2, cp2 = Pipe()
     s = "sudo tcpdump -i lo "
     sdrcmd = s
-    #rcvcmd = s
+    rcvcmd = s
     for k in sendportnum:
         sdrcmd += "port "+str(k)+" or "
-    #sdrcmd = sdrcmd[:-3]
-    for k in recvportnum:
-        sdrcmd += "port "+str(k)+" or "
     sdrcmd = sdrcmd[:-3]
-    sdrcmd += "-w total.pcap"
+    sdrcmd += "-w sender.pcap"
+    for k in recvportnum:
+        rcvcmd += "port "+str(k)+" or "
+    rcvcmd = rcvcmd[:-3]
+    rcvcmd += "-w receiver.pcap"
     tp1 = Process(target=opentcpdump, args=(cp1, sdrcmd, ))
-    #tp2 = Process(target=opentcpdump, args=(cp2, rcvcmd, ))
+    tp2 = Process(target=opentcpdump, args=(cp2, rcvcmd, ))
     print(sdrcmd)
-    #print(rcvcmd)
+    print(rcvcmd)
     tp1.start()
-    #tp2.start()
+    tp2.start()
     while True:
         if ppp1.poll():
             if ppp1.recv() == "End":
                 p1.send("End")
-                #p2.send("End")
+                p2.send("End")
 
 
 pp1, cpp1 = Pipe()
