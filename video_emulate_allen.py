@@ -134,7 +134,7 @@ def adjustNetworkEnvBw(bw=-1, stop=False, mode="ubuntu"):
     if mode == 'ubuntu':
         if stop:
             return
-        netemCmd = "sudo tc qdisc change dev lo root handle 1:0 tbf rate "+str(bw)+"kbit buffer "+str(bw/2)+"limit 200000"
+        netemCmd = "sudo tc qdisc change dev lo root handle 1:0 tbf rate "+str(bw)+"kbit buffer "+str(bw/2)+" limit 200000"
         subprocess.run(netemCmd.split(' '))
         return
 
@@ -218,8 +218,8 @@ def streaming(input_path, output_path, mode, rate, delay, delay_jitter, loss, fp
     
     if parent_conn.recv().split(' ')[1] == 'start':
         s = "vlc "+input_path+"  --play-and-exit --quiet :sout=#rtp{sdp=rtsp://:8554/} :sout--all :sout-keep"
-        #vlcProc = Process(target=openVLC, args=(s, ))
-        #vlcProc.start()
+        vlcProc = Process(target=openVLC, args=(s, ))
+        vlcProc.start()
         time.sleep(2)
 
         s = "vlc rtsp://127.0.0.1:8554/"
