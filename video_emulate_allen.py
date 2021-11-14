@@ -85,18 +85,66 @@ def packetLossIncreaseTest(childPipe, amount=0.02, interval=10):
             packetLoss += amount
             adjustNetworkEnvLat(packetLoss=packetLoss)
 
+def packLatTest(childPipe):
+    childPipe.sned("mix start")
+    interval = 2
+    start = time.time()
+    latency = 0
+    packetLoss = 0
+    bandwidth = 10000
+    while True:
+        if childPipe.poll():
+            if childPipe.recv() == "End":
+                adjustNetworkEnvLat(stop=True)
+                break
+        end = time.time()
+        if end-start >= interval:
+            op = random.randint(1,3)
+            upOrDown = random.randint(0,1)
+            if op == 1:
+                if upOrDown:
+                    latency += 400
+                else:
+                    latency -= 400
+                    if latency <= 0:
+                        latency = 0
+                print(datetime.strftime(datetime.now(),"%Y-%m-%d %H:%M:%S.%f")+" latency: "+str(latency)+"ms")
+                adjustNetworkEnvLat(latency=latency)
+            elif op == 2:
+                if upOrDown:
+                    packetLoss += 0.2
+                else:
+                    packetLoss -= 0.2
+                    if packetLoss <= 0:
+                        packetLoss = 0
+                print(datetime.strftime(datetime.now(),"%Y-%m-%d %H:%M:%S.%f")+" packet loss: "+str(packetLoss)+"%")
+                adjustNetworkEnvLat(packetLoss=packetLoss)
+            elif op == 3:
+                if upOrDown:
+                    bandwidth *= 0.75
+                    if bandwidth <= 300:
+                        bandwidth = 300
+                else:
+                    bandwidth *= 1.25
+                print(datetime.strftime(datetime.now(),"%Y-%m-%d %H:%M:%S.%f")+" bandwidth: "+str(bandwidth)+"kbit")
+                adjustNetworkEnvBw(bandwidth)
+        
+
 def adjustNetworkEnvBw(bw=-1, stop=False, mode="ubuntu"):
     if mode == 'ubuntu':
         if stop:
             return
-        netemCmd = "sudo tc qdisc change dev lo root handle 1:0 tbf rate "+str(bw)+"kbit buffer 200000 limit 200000"
+        netemCmd = "sudo tc qdisc change dev lo root handle 1:0 tbf rate "+str(bw)+"kbit buffer "+str(bw/2)+"limit 200000"
         subprocess.run(netemCmd.split(' '))
         return
-
 
 def adjustNetworkEnvLat(latency=-1, packetLoss=-1, targetBW=-1, defaultBW=-1, stop=False, jitter=-1, mode="ubuntu"):
     if mode == 'ubuntu':
         netemCmd = "sudo tc qdisc change dev lo"
+        if stop:
+            netemCmd = "sudo tc qdisc del dev lo root"
+            ret = subprocess.run(netemCmd.split(' '))
+            return
         nBW = False
         #parent 1:1 handle 2:0 netem delay "+defaultDelay+"ms "+defaultJitter+"ms distribution normal loss "+defaultLoss+"%"
         if(latency != -1):
@@ -174,8 +222,9 @@ def streaming(input_path, output_path, mode, rate, delay, delay_jitter, loss, fp
         #vlcProc.start()
         #time.sleep(3)
 
-        s = "ffmpeg -i rtmp://127.0.0.1/vod/test.mp4 -codec copy -r "+fps+" "+output_path
+        s = "vlc rtsp://127.0.0.1:8554/"
         subprocess.run(s.split())
+    #"ffmpeg -i rtmp://127.0.0.1/vod/test.mp4 -codec copy -r "+fps+" "+output_path
     #time.sleep(0.5)
     #s = "ffmpeg -i rtsp://127.0.0.1:8554/ -rtsp-transport tcp -codec copy -r "+fps+" "+output_path
     #s = "/Users/allenwang/ffmpeg/ffmpeg -hide_banner -loglevel panic -i rtsp://@127.0.0.1:8554/ -codec copy "+output_path /"+input_path+" "+input_path+"
@@ -207,9 +256,9 @@ if __name__ == "__main__":
     #subprocess.run('export GOPATH=\"$HOME/go\"')
     tmpcmd = "sudo tc qdisc del dev lo root"
     subprocess.run(tmpcmd.split(' '))
-    tmpcmd = "sudo tc qdisc add dev lo root handle 1:0 tbf rate "+defaultBW+" buffer 200000 limit 200000"
+    tmpcmd = "sudo tc qdisc add dev lo root handle 1:0 tbf rate "+defaultBW+" buffer 20000 limit 20000"
     subprocess.run(tmpcmd.split(' '))
-    tmpcmd = "sudo tc qdisc add dev lo parent 1:1 handle 2:0 netem delay "+defaultDelay+"ms "+defaultJitter+"ms distribution normal loss "+defaultLoss+"%"
+    tmpcmd = "sudo tc qdisc add dev lo parent 1:1 handle 2:0 netem delay 0ms"
     subprocess.run(tmpcmd.split(' '))
 
 
