@@ -220,7 +220,7 @@ def streaming(input_path, output_path, mode, rate, delay, delay_jitter, loss, fp
         s = "vlc "+input_path+"  --play-and-exit --quiet :sout=#rtp{sdp=rtsp://:8554/} :sout--all :sout-keep"
         #vlcProc = Process(target=openVLC, args=(s, ))
         #vlcProc.start()
-        #time.sleep(3)
+        time.sleep(2)
 
         s = "vlc rtsp://127.0.0.1:8554/"
         subprocess.run(s.split())
