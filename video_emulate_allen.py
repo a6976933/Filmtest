@@ -121,7 +121,7 @@ def packLatTest(childPipe):
                 break
         end = time.time()
         if end-start >= interval:
-            op = random.randint(1,2)
+            op = random.randint(1,3)
             upOrDown = random.randint(0,2)
             start = end
             #print(op)
@@ -149,7 +149,7 @@ def packLatTest(childPipe):
                     print(datetime.strftime(datetime.now(),"%Y-%m-%d %H:%M:%S.%f")+" packet loss: "+str(packetLoss)+"%")
                     adjustNetworkEnvLat(latency=latency, packetLoss=packetLoss)
                 '''
-            elif op == 2:
+            elif op == 2 or op == 3:
                 if upOrDown:
                     bandwidth *= 0.7
                     if bandwidth <= 2500:
