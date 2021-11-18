@@ -152,8 +152,8 @@ def packLatTest(childPipe):
             elif op == 2 or op == 3:
                 if upOrDown:
                     bandwidth *= 0.7
-                    if bandwidth <= 1500:
-                        bandwidth = 1500
+                    if bandwidth <= 600:
+                        bandwidth = 600
                 else:
                     bandwidth *= 1.25
                 f.write(datetime.strftime(datetime.now(),"%Y-%m-%d %H:%M:%S.%f")+" bandwidth: "+str(bandwidth)+"kbit\n")
@@ -167,7 +167,7 @@ def adjustNetworkEnvBw(bw=-1, stop=False, mode="ubuntu"):
     if mode == 'ubuntu':
         if stop:
             return
-        netemCmd = "sudo tc qdisc change dev lo root handle 1:0 tbf rate "+str(bw)+"kbit buffer "+str(bw)+" limit 20000000"
+        netemCmd = "sudo tc qdisc change dev lo root handle 1:0 tbf rate "+str(bw)+"kbit buffer 2000000 limit 2000000"
         subprocess.run(netemCmd.split(' '))
         return
 
