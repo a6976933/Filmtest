@@ -152,8 +152,8 @@ def packLatTest(childPipe):
             elif op == 2 or op == 3:
                 if upOrDown:
                     bandwidth *= 0.7
-                    if bandwidth <= 2500:
-                        bandwidth = 2500
+                    if bandwidth <= 1500:
+                        bandwidth = 1500
                 else:
                     bandwidth *= 1.25
                 f.write(datetime.strftime(datetime.now(),"%Y-%m-%d %H:%M:%S.%f")+" bandwidth: "+str(bandwidth)+"kbit\n")
