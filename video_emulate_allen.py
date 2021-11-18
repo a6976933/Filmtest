@@ -167,7 +167,7 @@ def adjustNetworkEnvBw(bw=-1, stop=False, mode="ubuntu"):
     if mode == 'ubuntu':
         if stop:
             return
-        netemCmd = "sudo tc qdisc change dev lo root handle 1:0 tbf rate "+str(bw)+"kbit buffer 2000000 limit 2000000"
+        netemCmd = "sudo tc qdisc change dev lo root handle 1:0 tbf rate "+str(bw)+"kbit buffer "+str(bw)+"kbit limit "+str(bw)+"kbit"
         subprocess.run(netemCmd.split(' '))
         return
 
@@ -295,7 +295,7 @@ if __name__ == "__main__":
     #subprocess.run('export GOPATH=\"$HOME/go\"')
     tmpcmd = "sudo tc qdisc del dev lo root"
     subprocess.run(tmpcmd.split(' '))
-    tmpcmd = "sudo tc qdisc add dev lo root handle 1:0 tbf rate "+defaultBW+" buffer 2000000 limit 2000000"
+    tmpcmd = "sudo tc qdisc add dev lo root handle 1:0 tbf rate "+defaultBW+" buffer "+defaultBW+" limit "+defaultBW
     subprocess.run(tmpcmd.split(' '))
     tmpcmd = "sudo tc qdisc add dev lo parent 1:1 handle 2:0 netem delay 0ms"
     subprocess.run(tmpcmd.split(' '))
