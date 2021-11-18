@@ -167,7 +167,7 @@ def adjustNetworkEnvBw(bw=-1, stop=False, mode="ubuntu"):
     if mode == 'ubuntu':
         if stop:
             return
-        netemCmd = "sudo tc qdisc change dev lo root handle 1:0 tbf rate "+str(bw)+"kbit buffer "+str(bw/2)+" limit 20000000"
+        netemCmd = "sudo tc qdisc change dev lo root handle 1:0 tbf rate "+str(bw)+"kbit buffer "+str(bw)+" limit 20000000"
         subprocess.run(netemCmd.split(' '))
         return
 
