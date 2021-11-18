@@ -286,7 +286,7 @@ def streaming(input_path, output_path, mode, rate, delay, delay_jitter, loss, fp
 if __name__ == "__main__":
     args = command_parse()
     fileList = os.listdir(args.path)
-    defaultBW = "10000kbit"
+    defaultBW = "5000kbit"
     defaultDelay = "1"
     defaultJitter = "1"
     defaultLoss = "0"
